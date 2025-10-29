@@ -50,7 +50,7 @@ export default function HomePage() {
           Borrow cash easily. Register, log in, and apply at your nearest MBZ branch.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <Link href="/signin">
+          <Link href="/login">
             <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-8 py-4 rounded-2xl shadow-lg">
               Apply Now (Login Required)
             </Button>
