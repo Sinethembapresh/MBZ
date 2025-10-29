@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { ShieldCheck, TrendingUp, Clock, MapPin, Star } from "lucide-react"
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 import { useState } from "react"
+import VideoPlayer from "@/components/VideoPlayer"
 
 export default function HomePage() {
   const [loanAmount, setLoanAmount] = useState("")
@@ -63,23 +64,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Quick Loan Eligibility Checker */}
+      {/* 2. Video Section */}
       <section className="py-16 bg-white text-center">
-        <h3 className="text-3xl font-bold mb-6 text-blue-900">Check Your Eligibility</h3>
-        <p className="mb-4 text-gray-700">Estimate if you qualify for a personal loan — no interest rates shown publicly.</p>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-          <input
-            type="number"
-            placeholder="Enter loan amount"
-            value={loanAmount}
-            onChange={(e) => setLoanAmount(e.target.value)}
-            className="px-4 py-3 rounded-lg border w-60 text-gray-900"
-          />
-          <Button onClick={checkEligibility} className="bg-blue-800 hover:bg-blue-900 text-white rounded-lg px-6 py-3">
-            Check Eligibility
-          </Button>
+        <h3 className="text-3xl font-bold mb-6 text-blue-900">Learn About Our Personal Loans</h3>
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="relative pt-[56.25%] rounded-2xl overflow-hidden shadow-xl">
+            <VideoPlayer />
+          </div>
+          <p className="mt-6 text-gray-700">
+            Discover how our personal loans can help you achieve your financial goals with flexible terms and competitive rates.
+          </p>
         </div>
-        {eligibilityMessage && <p className="mt-4 text-gray-800 font-medium">{eligibilityMessage}</p>}
       </section>
 
       {/* 3. Why Choose Us / Key Benefits */}
@@ -180,7 +175,7 @@ export default function HomePage() {
             <div key={i} className="p-6 bg-blue-50 rounded-2xl shadow hover:shadow-lg transition">
               <MapPin className="mx-auto text-blue-800 w-8 h-8 mb-2" />
               <h4 className="font-semibold text-xl mb-1">{branch} Branch</h4>
-              <p className="text-gray-700">Visit for loan application, collateral submission, and repayment assistance.</p>
+              
             </div>
           ))}
         </div>
@@ -221,3 +216,4 @@ export default function HomePage() {
     </div>
   )
 }
+ 
