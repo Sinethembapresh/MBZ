@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button"
 import { ShieldCheck, TrendingUp, Clock, MapPin, Star } from "lucide-react"
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react"
 
-import { useState } from "react"
 import VideoPlayer from "@/components/VideoPlayer"
 
 
